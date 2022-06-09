@@ -14,7 +14,18 @@
     <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel">
-        const elm = <h1> Hello World</h1>
+        const style = {
+            color: "green",
+            fontSize: "3em"
+        }
+
+        const elm = (
+            <>
+                <h1 id="heading" className="heading-green" style={style}> Hello <i>React</i> {console.log('hi')}</h1>
+                <button disabled={true}>click me</button>
+            </>
+        )
+
         ReactDOM.render(elm, document.querySelector('#app'));
     </script>
 </body>
