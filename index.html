@@ -24,7 +24,22 @@
             }
         }
 
-        ReactDOM.render(<MyHeading/>, document.querySelector('#app'));
+        function MyButton(){
+            return (
+                <button>Click me</button>
+            )
+        }
+
+        function App(){
+            return (
+                <>
+                    <MyHeading/>
+                    <MyButton />
+                </>
+            )
+        }
+
+        ReactDOM.render(<App/>, document.querySelector('#app'));
     </script>
 </body>
 </html>
