@@ -18,15 +18,21 @@
             render(){
                 return (
                     <header>
-                        <h1>Hello React !! </h1>
+                        <h1>Hello {this.props.name} </h1>
                     </header>
                 )
             }
         }
+        MyHeading.defaultProps = {
+            name : "World !!!"
+        }
+        function MyButton({bg}){
+            const style = {
+                background: bg
+            }
 
-        function MyButton(){
             return (
-                <button>Click me</button>
+                <button style={style}>Click me</button>
             )
         }
 
@@ -34,7 +40,7 @@
             return (
                 <>
                     <MyHeading/>
-                    <MyButton />
+                    <MyButton bg="red"/>
                 </>
             )
         }
