@@ -14,19 +14,17 @@
     <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel">
-        const style = {
-            color: "green",
-            fontSize: "3em"
+        class MyHeading extends React.Component{
+            render(){
+                return (
+                    <header>
+                        <h1>Hello React !! </h1>
+                    </header>
+                )
+            }
         }
 
-        const elm = (
-            <>
-                <h1 id="heading" className="heading-green" style={style}> Hello <i>React</i> {console.log('hi')}</h1>
-                <button disabled={true}>click me</button>
-            </>
-        )
-
-        ReactDOM.render(elm, document.querySelector('#app'));
+        ReactDOM.render(<MyHeading/>, document.querySelector('#app'));
     </script>
 </body>
 </html>
